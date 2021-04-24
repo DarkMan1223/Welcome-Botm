@@ -68,13 +68,13 @@ const embed = new Discord.MessageEmbed()
 /////////// code welcome
 jano.on("guildMemberAdd", member => {
   const channel = member.guild.channels.cache.find(
-    channel => channel.name === "𝐖𝐞𝐥𝐜𝐨𝐦𝐞"
+    channel => channel.name === ""
   );
   let jano = member.user.avatarURL();
   if (!channel) return;
   const joinembed = new Discord.MessageEmbed()
     .setTitle(
-      `<a:jano_10:799629559217389608>**A new member just arrived**<a:jano_10:799629559217389608>`
+      ` **A new member just arrived**<a:jano_10:799629559217389608>`
     )
     .setColor("RANDOM")
     .setThumbnail(jano)
@@ -84,25 +84,22 @@ jano.on("guildMemberAdd", member => {
     · · • • • ✤ • • • · ·`
     )
     .addField(
-      "<a:jano_13:804354511355117598>| **Welcome**",
+      "👐 | **Welcome**",
       `Welcome to the server, ${member}
     · · • • • ✤ • • • · ·`
     )
     .addField(
-      "<a:jano_14:804354530606186527><a:jano_15:804354549653438534>| **User** :",
+      "🆔 | **ID** :",
       "**[" + `${member.id}` + "]**"
     )
     .addField(
-      "<a:jano_10:799629559217389608>| **Your are the member**<a:jano_10:799629559217389608>",
+      "👤 | **All Member**",
       `${member.guild.memberCount}
       · · • • • ✤ • • • · ·`
     )
-    .addField("Server", `${member.guild.name}`, true)
+    .addField("🍁 Server", `${member.guild.name}`, true)
     .setFooter(`**${member.guild.name}**`)
     .setTimestamp()
-    .setImage(
-      "https://media.discordapp.net/attachments/806608889805537309/808492139172200458/ImpracticalFearfulEsok-max-1mb.gif"
-    )
     .setFooter(`${member.guild.name}`)
     .setTimestamp();
   channel.send(joinembed);
