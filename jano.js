@@ -68,7 +68,7 @@ const embed = new Discord.MessageEmbed()
 /////////// code welcome
 jano.on("guildMemberAdd", member => {
   const channel = member.guild.channels.cache.find(
-    channel => channel.name === ""
+    channel => channel.name === "・┊welcome"
   );
   let jano = member.user.avatarURL();
   if (!channel) return;
@@ -106,7 +106,7 @@ jano.on("guildMemberAdd", member => {
 ////////////// code left
 jano.on("guildMemberRemove", member => {
   const channel = member.guild.channels.cache.find(
-    channel => channel.name === "left"
+    channel => channel.name === "・┊left"
   );
   let jano = member.user.avatarURL();
   if (!channel) return;
