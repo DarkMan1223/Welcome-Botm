@@ -21,17 +21,17 @@ const listener = app.listen(process.env.PORT, () => {
 
 const Discord = require ("discord.js")
 const moment = require ("moment")
-const jano = new Discord.Client();
-const prefix = "j!";
+const DarkMan = new Discord.Client();
+const prefix = "D!";
 
 
-jano.login("ODI4MjE4ODgxOTg5OTM1MTA1.YGmY8Q.vaFh0eOuxYahPAa7OnUG9pAyCgY");
-jano.on("ready", async () => {
-  console.log(`Logged in as ${jano.user.username}!`);
-  jano.user.setStatus("ONLINE");
-  jano.user.setActivity(`${prefix}help`, { type: "WATCHING" });
-  jano.guilds.cache.forEach(g => {
-    if (g.member(jano.user).hasPermission("ADMINISTRATOR")) {
+DarkMan.login("");
+DarkMan.on("ready", async () => {
+  console.log(`Logged in as ${DarkMan.user.username}!`);
+  DarkMan.user.setStatus("ONLINE");
+  DarkMan.user.setActivity(`${prefix}help`, { type: "WATCHING" });
+  DarkMan.guilds.cache.forEach(g => {
+    if (g.member(DarkMan.user).hasPermission("ADMINISTRATOR")) {
       g.fetchInvites().then(guildInvites => {});
     }
   });
@@ -39,12 +39,12 @@ jano.on("ready", async () => {
 
 //////////
 
-jano.on("message", message => {
+DarkMan.on("message", message => {
 if (message.content === prefix +"help") {
 const embed = new Discord.MessageEmbed()
 .setColor("BLACK")
 .setThumbnail("https://media.tenor.com/images/85500641e177bccfc805cac8a2805e3f/tenor.gif")
-.setAuthor("Prefix [ j! ]","https://i.imgur.com/Y9N3OCy.gif?noredirect")
+.setAuthor("Prefix [ D! ]","https://i.imgur.com/Y9N3OCy.gif?noredirect")
 .setDescription(` 
 **
 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 [change channel]
@@ -56,7 +56,7 @@ const embed = new Discord.MessageEmbed()
 **[ click here ](https://discord.gg/3wykSpqjZq)**
  `)
     
-    .setFooter(` System bot ✨ | Coded by , JANO`, jano.user.avatarURL)
+    .setFooter(` System bot ✨ | Coded by , DarkMan`, DarkMan.user.avatarURL)
     .setURL("https://discord.gg/3wykSpqjZq")
       
     message.channel.send(embed);
@@ -66,37 +66,37 @@ const embed = new Discord.MessageEmbed()
 //////////////
 
 /////////// code welcome
-jano.on("guildMemberAdd", member => {
+DarkMan.on("guildMemberAdd", member => {
   const channel = member.guild.channels.cache.find(
     channel => channel.name === "・┊welcome"
   );
-  let jano = member.user.avatarURL();
+  let DarkMan = member.user.avatarURL();
   if (!channel) return;
   const joinembed = new Discord.MessageEmbed()
     .setTitle(``)
     .setAuthor(`Welcome Bot`, `https://cdn.discordapp.com/avatars/828218881989935105/479953e51dadf4f38c5bc72c912193c5.webp?size=1024`)
     .setColor("RANDOM")
-    .setThumbnail(jano)
+    .setThumbnail(DarkMan)
     .addField(
-      "<a:jano_28:799630995317850152>| **name** : ",
+      "**name** : ",
       `${member}
     · · • • • ✤ • • • · ·`
     )
     .addField(
-      "👐 | **Welcome**",
+      "**Welcome**",
       `Welcome to the server, ${member}
     · · • • • ✤ • • • · ·`
     )
     .addField(
-      "🆔 | **ID** :",
+      "**ID** :",
       "**[" + `${member.id}` + "]**"
     )
     .addField(
-      "👤 | **All Member**",
+      "**All Member**",
       `${member.guild.memberCount}
       · · • • • ✤ • • • · ·`
     )
-    .addField("🍁 Server", `${member.guild.name}`, true)
+    .addField("Server", `${member.guild.name}`, true)
     .setFooter(`**${member.guild.name}**`)
     .setTimestamp()
     .setFooter(`${member.guild.name}`)
@@ -104,11 +104,11 @@ jano.on("guildMemberAdd", member => {
   channel.send(joinembed);
 });
 ////////////// code left
-jano.on("guildMemberRemove", member => {
+DarkMan.on("guildMemberRemove", member => {
   const channel = member.guild.channels.cache.find(
     channel => channel.name === "・┊left"
   );
-  let jano = member.user.avatarURL();
+  let DarkMan = member.user.avatarURL();
   if (!channel) return;
   const joinembed = new Discord.MessageEmbed()
     .setTitle(``)
@@ -117,13 +117,13 @@ jano.on("guildMemberRemove", member => {
       "https://thumbs.gfycat.com/ChiefBiodegradableAmericanalligator-size_restricted.gif"
     )
     .setColor("RANDOM")
-    .setThumbnail(jano)
-    .addField("👥|𝐍𝐀𝐌𝐄:", `${member}`)
+    .setThumbnail(DarkMan)
+    .addField("**name :**", `${member}`)
     .addField("<a:jano_13:799300705323188285>├baxerche mle shkaw┤<a:jano_13:799300705323188285>", `!`)
-    .addField("✶⊶⊷⊶⊷❍⊶⊷⊶⊷✶;(",   "<a:jano_12:799299644055748632>naya aw servera<a:jano_12:799299644055748632>")
+    .addField("✶⊶⊷⊶⊷❍⊶⊷⊶⊷✶;(",   "bye bye")
     .addField(
       "⳺☟مــیــمــبەرەکــان ماوە⳻",
-      `${member.guild.memberCount}` + " ڪــەس"
+      `${member.guild.memberCount}` + "member"
     )
     .setFooter(`${member.guild.name}`)
     .setTimestamp();
