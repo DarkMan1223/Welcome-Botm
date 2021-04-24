@@ -119,7 +119,7 @@ DarkMan.on("guildMemberRemove", member => {
     .setColor("RANDOM")
     .setThumbnail(DarkMan)
     .addField("**name :**", `${member}`)
-    .addField("<a:jano_13:799300705323188285>├baxerche mle shkaw┤<a:jano_13:799300705323188285>", `!`)
+    .addField("Bye Bye", `!`)
     .addField("✶⊶⊷⊶⊷❍⊶⊷⊶⊷✶;(",   "bye bye")
     .addField(
       "⳺☟مــیــمــبەرەکــان ماوە⳻",
@@ -130,7 +130,7 @@ DarkMan.on("guildMemberRemove", member => {
   channel.send(joinembed);
 });
 /////////////// code embed
-jano.on("guildMemberAdd", member => {
+DarkMan.on("guildMemberAdd", member => {
   const joinembed = new Discord.MessageEmbed()
 
     .setColor("RANDOM")
@@ -138,21 +138,21 @@ jano.on("guildMemberAdd", member => {
       `__**A new member just arrived!**__`
     )
     .addField(
-      "<a:jano_28:799630995317850152>| name : ",
+      " name : ",
       `${member}
     · · • • • ✤ • • • · ·`
     )
     .addField(
-      "<a:jano_28:799630995317850152>| Welcome",
+      "Welcome",
       `Welcome to the server, ${member}
     · · • • • ✤ • • • · ·`
     )
     .addField(
-      " <a:jano_16:799306063714451476>| User :",
+      " User :",
       "**[" + `${member.id}` + "]**"
     )
     .addField(
-      "<a:jano_16:799306063714451476>| Your are the member",
+      "Your are the member",
       `${member.guild.memberCount}
       · · • • • ✤ • • • · ·`
     )
@@ -160,7 +160,7 @@ jano.on("guildMemberAdd", member => {
     .setFooter(`**${member.guild.name}**`)
     .setTimestamp()
     .setImage(
-      "https://media.discordapp.net/attachments/806608889805537309/808492139172200458/ImpracticalFearfulEsok-max-1mb.gif"
+      ""
     )
     .setFooter(`${member.guild.name}`)
     .setTimestamp();
