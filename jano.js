@@ -73,9 +73,8 @@ jano.on("guildMemberAdd", member => {
   let jano = member.user.avatarURL();
   if (!channel) return;
   const joinembed = new Discord.MessageEmbed()
-    .setTitle(
-      ` **A new member just arrived**<a:jano_10:799629559217389608>`
-    )
+    .setTitle(``)
+    .setAuthor(`Welcome Bot`, `https://cdn.discordapp.com/avatars/828218881989935105/479953e51dadf4f38c5bc72c912193c5.webp?size=1024`)
     .setColor("RANDOM")
     .setThumbnail(jano)
     .addField(
@@ -107,14 +106,13 @@ jano.on("guildMemberAdd", member => {
 ////////////// code left
 jano.on("guildMemberRemove", member => {
   const channel = member.guild.channels.cache.find(
-    channel => channel.name === "𝐋𝐞𝐟𝐭"
+    channel => channel.name === "left"
   );
   let jano = member.user.avatarURL();
   if (!channel) return;
   const joinembed = new Discord.MessageEmbed()
-    .setTitle(
-      `left`
-    )
+    .setTitle(``)
+    .setAuthor(`Welcome Bot`, `https://cdn.discordapp.com/avatars/828218881989935105/479953e51dadf4f38c5bc72c912193c5.webp?size=1024`)
     .setImage(
       "https://thumbs.gfycat.com/ChiefBiodegradableAmericanalligator-size_restricted.gif"
     )
