@@ -55,8 +55,8 @@ const embed = new Discord.MessageEmbed()
 **[ click here ](https://discord.gg/tstcyhgQeS)**
  `)
     
-    .setFooter(` System bot ✨ | Coded by , DarkMan`, DarkMan.user.avatarURL)
-    .setURL("https://discord.gg/3wykSpqjZq")
+    .setFooter(` Remix Bot ✨ | Coded by , DarkMan`, DarkMan.user.avatarURL)
+    .setURL("https://discord.gg/YSx9p3e7F8")
       
     message.channel.send(embed);
       message.react("<a:jano_27:799630916820795422>");
