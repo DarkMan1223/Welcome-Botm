@@ -1,1 +1,1 @@
-worker: node jano.js
+worker: node DarkMan.js
