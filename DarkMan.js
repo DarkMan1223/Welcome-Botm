@@ -59,7 +59,7 @@ const embed = new Discord.MessageEmbed()
     .setURL("https://discord.gg/YSx9p3e7F8")
       
     message.channel.send(embed);
-      message.react("<a:jano_27:799630916820795422>");
+      message.react("❤️");
   }
 });
 //////////////
