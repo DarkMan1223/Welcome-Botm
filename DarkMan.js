@@ -43,17 +43,16 @@ DarkMan.on("message", message => {
 if (message.content === prefix +"help") {
 const embed = new Discord.MessageEmbed()
 .setColor("BLACK")
-.setThumbnail("https://media.tenor.com/images/85500641e177bccfc805cac8a2805e3f/tenor.gif")
-.setAuthor("Prefix [ D! ]","https://i.imgur.com/Y9N3OCy.gif?noredirect")
+.setAuthor("Prefix [ D! ]","")
 .setDescription(` 
 **
-𝐖𝐞𝐥𝐜𝐨𝐦𝐞 [change channel]
-𝐋𝐞𝐟𝐭 [change channel]
+・┊welcome [change channel]
+・┊left [change channel]
 **
 **[ invite ]**
-**[ click here ](https://discord.com/api/oauth2/authorize?client_id=799228179784794183&permissions=8&scope=bot)** 
+**[ click here ](https://discord.com/api/oauth2/authorize?client_id=743869029638471802&permissions=8&scope=bot)** 
 **[ support ]**
-**[ click here ](https://discord.gg/3wykSpqjZq)**
+**[ click here ](https://discord.gg/tstcyhgQeS)**
  `)
     
     .setFooter(` System bot ✨ | Coded by , DarkMan`, DarkMan.user.avatarURL)
@@ -120,9 +119,9 @@ DarkMan.on("guildMemberRemove", member => {
     .setThumbnail(DarkMan)
     .addField("**name :**", `${member}`)
     .addField("Bye Bye", `!`)
-    .addField("✶⊶⊷⊶⊷❍⊶⊷⊶⊷✶;(",   "bye bye")
+    .addField("👋;(",   "bye bye")
     .addField(
-      "⳺☟مــیــمــبەرەکــان ماوە⳻",
+      "All Memebers",
       `${member.guild.memberCount}` + "member"
     )
     .setFooter(`${member.guild.name}`)
