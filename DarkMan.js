@@ -29,7 +29,7 @@ DarkMan.login("ODMyNzQ3MTc4Mjk1OTUxNDAx.YHoSPw.1LKuN8r1jOEWfT7zdrwghP046gg");
 DarkMan.on("ready", async () => {
   console.log(`Logged in as ${DarkMan.user.username}!`);
   DarkMan.user.setStatus("ONLINE");
-  DarkMan.user.setActivity(`${prefix}help`, { type: "WATCHING" });
+  DarkMan.user.setActivity(`>help`, { type: "WATCHING" });
   DarkMan.guilds.cache.forEach(g => {
     if (g.member(DarkMan.user).hasPermission("ADMINISTRATOR")) {
       g.fetchInvites().then(guildInvites => {});
